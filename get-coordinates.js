@@ -3,7 +3,6 @@ Coordinates = {
     url: 'https://maps.googleapis.com/maps/api/geocode/json?address=',
     getFromAdress: function(address){
         var apiUrl = this.url + encodeURIComponent(address) + '&key=' + this.key;
-        console.log(apiUrl);
         var res = HTTP.get(apiUrl).data;
         if(res['status']=='OK'){
             var response = {
